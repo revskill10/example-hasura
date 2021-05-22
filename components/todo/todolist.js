@@ -20,7 +20,7 @@ const TodoList = ({}) => {
   const queryHasura = async (query) => {
     try {
       setIsLoading(true);
-      let res = await fetch(process.env.NEXT_PUBLIC_HASURA_GRAPHQL_URL, {
+      let res = await fetch(process.env.NEXT_PUBLIC_HASURA_TODO_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

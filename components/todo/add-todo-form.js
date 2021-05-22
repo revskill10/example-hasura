@@ -10,7 +10,7 @@ const AddTodoForm = ({ setTodoAdded, isLoading, setIsLoading }) => {
     e.preventDefault();
     if (!todo) return;
     setIsLoading(true);
-    await fetch(process.env.NEXT_PUBLIC_HASURA_GRAPHQL_URL, {
+    await fetch(process.env.NEXT_PUBLIC_HASURA_TODO_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
